@@ -1,0 +1,30 @@
+body{
+    display: grid;
+    grid-template-areas: 'navbar navbar navbar batata'
+                        'header header header batata'
+                        'section section section batata'
+                        'footer footer footer batata';
+    grid-template-rows: 5vh 20vh 60vh 15vh;
+    grid-template-columns: 10vw 30vw 20vw 40vw; 
+    margin: 0;
+}
+nav{
+    grid-area: navbar;
+    background-color: palevioletred;
+}
+header{
+    grid-area: header;
+    background-color: yellowgreen;
+}
+section{
+    grid-area: section;
+    background-color: slateblue;
+}
+aside{
+    grid-area: batata;
+    background-color: lightgray;
+}
+footer{
+    grid-area: footer;
+    background-color: indianred;
+}
