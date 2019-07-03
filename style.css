@@ -1,28 +1,66 @@
 body{
     display: grid;
-    grid-template-areas: 'navbar navbar navbar batata'
-                        'header header header batata'
+    font-family: font-family: 'DM Serif Display', serif;
+    grid-template-areas: 'navbar navbar navbar navbar'
+                        'header header header header'
                         'section section section batata'
-                        'footer footer footer batata';
-    grid-template-rows: 5vh 20vh 60vh 15vh;
-    grid-template-columns: 10vw 30vw 20vw 40vw; 
+                        'footer footer footer footer';
+    grid-template-rows: 10vh 350px 60vh 15vh;
+    grid-template-columns: 25vw 25vw 20vw 30vw;
+    /* grid-gap: 1vh;  */
     margin: 0;
 }
+body:::-webkit-scrollbar{
+    width: 0%;
+    background: transparent;
+}
 nav{
-    grid-area: navbar;
+    align-items: center;
     background-color: palevioletred;
+    display: flex;
+    grid-area: navbar;
+    justify-content: space-between;
+    background-color: brown;
+}
+nav div img{
+    margin-left: 20px;
+}
+nav div:nth-child(2){
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+a{
+    color: aliceblue;
+    font-size: 22pt;
+    text-decoration: none;
 }
 header{
     grid-area: header;
-    background-color: yellowgreen;
+    background-image: url("img/bab.png");
+    background-size: cover;
 }
 section{
     grid-area: section;
     background-color: slateblue;
 }
+section p{
+    color: white;
+}
+section h2{
+    color: white;
+}
 aside{
     grid-area: batata;
     background-color: lightgray;
+}
+aside img{
+    width: 40px;   
+}
+aside p{
+    font-size: 18pt;
+    margin:0;
+    text-align: center;
 }
 footer{
     grid-area: footer;
